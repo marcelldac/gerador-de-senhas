@@ -1,9 +1,10 @@
 import sqlite3
 
-PASSWORD = '123456'
+PASSWORD = 'a'
 
-senha = input("Insira sua senha: ")
-if senha != PASSWORD:
+password = input("Insira sua senha: ")
+
+if password != PASSWORD:
   print('Senha Incorreta! Encerrando...')
   exit()
 
@@ -26,6 +27,7 @@ def menu():
   print('r : Recuperar uma senha')
   print('s : Sair')
   print('****************************')
+    
 
 def getPassword(service):
   cursor.execute(f'''
@@ -65,6 +67,7 @@ while True:
     service = input('Qual o nome do serviço? ')
     username = input('Qual o e-mail/username? ')
     password = input('Qual a senha? ')
+
     insertPassword(service, username, password)
 
   if op == 'l':
